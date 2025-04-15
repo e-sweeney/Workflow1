@@ -18,6 +18,6 @@ jobs:
                 steps:
                         - name: python
                           run: | 
-                                dnf install python39 -y
+                                apt-get install python39 -y
                                 python -V
 
