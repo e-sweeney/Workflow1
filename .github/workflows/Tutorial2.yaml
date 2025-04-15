@@ -1,0 +1,23 @@
+name: tutorial2
+
+on: workflow_dispatch
+
+jobs: 
+        job1:
+                name: job 1
+                runs-on: ubuntu-latest
+                steps:
+                        - name: setup
+                          run: |
+                                  echo date
+                                  pwd
+                                  ls -al
+        job2: 
+                name: job 2
+                runs-on: ubuntu-latest
+                steps:
+                        - name: python
+                          run: | 
+                                dnf install python39 -y
+                                python -V
+
