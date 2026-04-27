@@ -1,4 +1,4 @@
-name: Build and Test
+name: Arefacts
 
 on: workflow_dispatch
 
@@ -11,7 +11,7 @@ jobs:
       - name: Build project
         run: |
           mkdir dist
-          echo "Hello World" > dist/output.txt
+          echo "Arefact Demo" > dist/output.txt
 
       - name: Upload artifact
         uses: actions/upload-artifact@v6
