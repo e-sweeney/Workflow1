@@ -30,4 +30,9 @@ jobs:
         run: |
           gsutil cp -r dist/* gs://artefact-bucket/builds/${{ github.run_id }}/
 
-      
+      # Download from bucket
+      - name: Download from GCS
+        run: |
+          mkdir ./gcs
+          gsutil cp -r gs://artefact-bucket/builds/${{ github.run_id }}/ ./gcs
+          ls -l ./gcs
