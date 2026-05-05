@@ -35,4 +35,4 @@ jobs:
         run: |
           mkdir ./gcs
           gsutil cp -r gs://artefact-bucket/builds/${{ github.run_id }}/ ./gcs
-          ls -l ./gcs
+          cat ./gcs/${{github.run_id}}
