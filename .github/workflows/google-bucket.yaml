@@ -34,9 +34,9 @@ jobs:
       - name: Download from GCS
         run: |
           mkdir ./gcs
-          gsutil cp -r gs://artefact-bucket/builds/${{ github.run_id }}/ ./gcs
+          gsutil cp -r gs://artefact-bucket/builds/${{ github.run_id }}/output.txt ./gcs
           pwd
           echo "this is the contents of the default directory"
           ls
-          echo " this is the contents of the gcp directory"
-          ls -l ./gcs
+          echo " this is the contents of the gcp directory showing text files only"
+          ls -l ./gcs/*.txt
