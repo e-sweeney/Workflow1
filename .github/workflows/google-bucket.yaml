@@ -35,4 +35,8 @@ jobs:
         run: |
           mkdir ./gcs
           gsutil cp -r gs://artefact-bucket/builds/${{ github.run_id }}/ ./gcs
-          cat ./gcs/output.txt
+          pwd
+          echo "this is the contents of the default directory"
+          ls
+          echo " this is the contents of the gcp directory"
+          ls -l ./gcs
