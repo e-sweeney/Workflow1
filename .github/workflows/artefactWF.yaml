@@ -30,4 +30,6 @@ jobs:
           path: dist/
 
       - name: Use artifact
-        run: cat dist/output.txt
+        run: |
+          pwd
+          cat dist/output.txt
